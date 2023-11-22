@@ -3,7 +3,7 @@ This repository contains a test for caddy to see how a failed download is handle
 It will stream the file called `testfile.zip` (downloaded from https://www.thinkbroadband.com/download)
 and abort the download after a bit.
 
-Run the server:
+Run the server (install rust first if needed: https://rustup.rs/):
 ```
 cargo r
 ```
