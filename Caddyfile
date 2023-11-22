@@ -1,0 +1,21 @@
+# {
+# 	servers {
+# 		protocols h1
+# 	}
+# }
+
+http://caddy.local:3031 {
+	reverse_proxy https://localhost:3030 {
+		transport http {
+			tls_insecure_skip_verify
+		}
+	}
+}
+
+https://caddy.local:3032 {
+	reverse_proxy https://localhost:3030 {
+		transport http {
+			tls_insecure_skip_verify
+		}
+	}
+}
